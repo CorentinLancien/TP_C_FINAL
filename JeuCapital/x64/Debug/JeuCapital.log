@@ -1,0 +1,5 @@
+﻿  gestionpays.c
+c:\users\clanci\documents\visual studio 2015\projects\jeucapital\jeucapital\gestionpays.c(4): warning C4101: 'c' : variable locale non référencée
+c:\users\clanci\documents\visual studio 2015\projects\jeucapital\jeucapital\gestionpays.c(15): warning C4101: 'r' : variable locale non référencée
+  JeuCapital.vcxproj -> C:\Users\CLANCI\Documents\Visual Studio 2015\Projects\JeuCapital\x64\Debug\JeuCapital.exe
+  JeuCapital.vcxproj -> C:\Users\CLANCI\Documents\Visual Studio 2015\Projects\JeuCapital\x64\Debug\JeuCapital.pdb (Partial PDB)

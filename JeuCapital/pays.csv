@@ -1,0 +1,191 @@
+1;Tokyo;Japon;33413000
+2;Mexico;Mexique;22414319
+3;Séoul;Corée du Sud;22173711
+4;Jakarta;Indonésie;18206700
+5;New Delhi;Inde;17367300
+6;Le Caire;Égypte;16244700
+7;Moscou;Russie;14740000
+8;Buenos Aires;Argentine;14235106
+9;Manille;Philippines;14140000
+10;Londres;Royaume-Uni;13229219
+12;Dhâkâ;Bangladesh;11918442
+11;Paris;France;12223100
+13;Pékin;Chine;20690000
+14;Bangkok;Thaïlande;9308924
+15;Lima;Pérou;8270000
+16;Lisbonne;Portugal;7450000
+17;Téhéran;Iran;6758845
+18;Kinshasa;République démocratique du Congo;6500000
+19;Santiago;Chili;6000000
+20;Madrid;Espagne;5500000
+21;Naypyidaw;Birmanie;5500000
+22;Damas;Syrie;5000000
+23;Singapour;Singapour;4240000
+24;Ankara;Turquie;4000000
+25;Luanda;Angola;4000000
+26;Bagdad;Irak;3800000
+27;Riyad;Arabie saoudite;3700000
+28;Caracas;Venezuela;3600000
+29;Athènes;Grèce;3566060
+30;Berlin;Allemagne;3400000
+31;Accra;Ghana;3000000
+32;Hanoï;Viêt Nam;2842000
+33;Kiev;Ukraine;2800000
+34;Rome;Italie;2800000
+35;Addis-Abeba;Éthiopie;2600000
+36;Guatemala;Guatemala;2500000
+37;Pyongyang;Corée du Nord;2500000
+38;Tachkent;Ouzbékistan;2500000
+39;Saint-Domingue;République dominicaine;2400000
+40;Brasilia;Brésil;2300000
+41;Nairobi;Kenya;2100000
+42;San José;Costa Rica;2100000
+43;Tunis;Tunisie;2083000
+44;Alger;Algérie;2030000
+45;Bucarest;Roumanie;2020000
+46;Budapest;Hongrie;2000000
+47;Conakry;Guinée;2000000
+48;La Havane;Cuba;2000000
+49;Port-au-Prince;Haïti;2000000
+50;Dakar;Sénégal;1999000
+51;Amman;Jordanie;1900000
+52;Bogota;Colombie;1900000
+53;Stockholm;Suède;1800000
+54;Kaboul;Afghanistan;1780000
+55;Bakou;Azerbaïdjan;1727200
+56;San Salvador;Salvador;1700000
+57;Minsk;Biélorussie;1699000
+58;Varsovie;Pologne;1690821
+59;Vienne;Autriche;1600000
+60;Astana;Kazakhstan;1560000
+61;Harare;Zimbabwe;1500000
+62;Katmandou;Népal;1500000
+63;Khartoum;Soudan;1400000
+64;Montevideo;Uruguay;1400000
+65;Quito;Équateur;1400000
+66;Tananarive;Madagascar;1300000
+67;Colombo;Sri Lanka;1300000
+68;Kuala Lumpur;Malaisie;1297526
+69;Erevan;Arménie;1248700
+70;Tripoli;Libye;1223300
+71;Phnom Penh;Cambodge;1200000
+72;Sofia et bruxelles;Bulgarie et belgique;1200000
+73;Belgrade;Serbie;1168454
+74;Mogadiscio;Somalie;1162000
+75;Prague;République tchèque;1160000
+76;Tegucigalpa;Honduras;1160000
+77;Yaoundé;Cameroun;1150000
+78;Maputo;Mozambique;1111641
+79;Tbilissi;Géorgie;1100000
+80;Pretoria;Afrique du Sud;1080000
+81;Kampala;Ouganda;1078948
+82;Ottawa;Canada;1063664
+83;Abou Dabi;Émirats arabes unis;1000000
+84;Bamako;Mali;1000000
+85;Beyrouth;Liban;1000000
+86;Lusaka;Zambie;1000000
+87;Managua;Nicaragua;1000000
+88;Ndjamena;Tchad;1000000
+89;Ouagadougou;Burkina Faso;1000000
+90;Sanaa;Yémen;954400
+91;Mascate;Oman;887000
+92;Lomé;Togo;850000
+93;Panama;Panama;827828
+94;Brazzaville;République du Congo;800000
+95;Islamabad;Pakistan;800000
+96;Kigali;Rwanda;800000
+97;Zagreb;Croatie;779145
+98;Jerusalem;Israël;760000
+99;Monrovia;Libéria;750000
+100;R?ga;Lettonie;739232
+101;Amsterdam;Pays-Bas;739104
+102;Niamey;Niger;700000
+103;Tirana;Albanie;700000
+104;Oulan-Bator;Mongolie;691000
+105;Bangui;République centrafricaine;690000
+106;Libreville;Gabon;673995
+107;Chi?in?u;Moldavie;655000
+108;Rabat;Maroc;650000
+109;Vientiane;Laos;633000
+110;Kingston;Jamaïque;628000
+111;Bichkek;Kirghizistan;619000
+112;Achgabat;Turkménistan;605000
+113;Skopje;Macédoine;600000
+114;Washington;États-Unis;572059
+115;Helsinki;Finlande;560500
+116;Nouakchott;Mauritanie;559000
+117;Vilnius;Lituanie;553373
+118;Freetown;Sierra Leone;550000
+119;Asuncion;Paraguay;539000
+120;Oslo;Norvège;521886
+121;Douchanbé;Tadjikistan;513000
+122;Copenhague;Danemark;500000
+123;Dublin;Irlande;495101
+124;Asmara;Érythrée;435000
+125;Bratislava;Slovaquie;428672
+126;Koweït;Koweït;413170
+127;Lilongwe;Malawi;400000
+128;Tallinn;Estonie;397150
+129;Sarajevo;Bosnie-Herzégovine;387876
+130;Djibouti;Djibouti;383000
+131;Doha;Qatar;370000
+132;Wellington;Nouvelle-Zélande;363400
+133;Canberra;Australie;323000
+134;Port Moresby;Papouasie-Nouvelle-Guinée;320000
+135;Bujumbura;Burundi;300000
+136;Port-d'Espagne;Trinité-et-Tobago;300000
+137;Porto-Novo;Bénin;295000
+138;Sucre (Bolivie);Bolivie;292080
+139;Bissau;Guinée-Bissau;274000
+140;Ljubljana;Slovénie;265881
+141;Georgetown;Guyana;250000
+142;Paramaribo;Suriname;243556
+143;Windhoek;Namibie;233529
+144;Nassau;Bahamas;214000
+145;Nicosie;Chypre;197800
+146;Dodoma;Tanzanie;189000
+147;Gaborone;Botswana;186007
+148;Maseru;Lesotho;173700
+149;Suva;Fidji;167000
+151;Manama;Bahreïn;148000
+152;Port-Louis;Maurice;146319
+153;Podgorica;Monténégro;139500
+154;Berne;Suisse;123000
+155;Reykjavik;Islande;113288
+156;Yamoussoukro;Côte d'Ivoire;110000
+157;Praia;Cap-Vert;106052
+158;Abuja;Nigeria;100000
+159;Bandar Seri Begawan;Brunei;85000
+160;Luxembourg;Luxembourg;77300
+161;Malé;Maldives;70000
+162;Castries;Sainte-Lucie;67000
+163;Dili;Timor oriental;65000
+164;Moroni;Comores;61000
+165;Mbabane;Swaziland;60000
+166;Thimphou;Bhoutan;55000
+167;Malabo;Guinée équatoriale;47500
+168;São Tomé;Sao Tomé-et-Principe;43420
+169;Banjul;Gambie;34828
+170;Apia;Samoa;34000
+171;Nuku'alofa;Tonga;34000
+172;Saint-Georges;Grenade;33734
+173;Monaco;Monaco;32020
+174;Honiara;Salomon;30000
+175;Port-Vila;Vanuatu;30000
+176;Saint John's;Antigua-et-Barbuda;30000
+177;Tarawa;Kiribati;30000
+178;Victoria;Seychelles;24701
+179;Delap-Uliga-Darrit;Marshall;23676
+180;Andorre-la-Vieille;Andorre;20800
+181;Kingstown;Saint-Vincent-et-les Grenadines;16175
+182;Roseau;Dominique;15853
+183;Basseterre;Saint-Christophe-et-Niévès;15000
+184;Palikir;Micronésie;8600
+185;Belmopan;Belize;8305
+186;La Valette;Malte;7100
+187;Bridgetown;Barbade;6070
+188;Vaduz;Liechtenstein;5203
+189;Funafuti;Tuvalu;4590
+190;Ville de Saint-Marin;Saint-Marin;4482
+191;Cité du Vatican;Saint-Siège;790
+192;Melekeok;Palaos;560
