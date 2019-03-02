@@ -102,6 +102,7 @@ void jeuCapitale(PAYS * pTab) {
 	FILE * curseur = fopen("enregistrement.txt", "r");
 	printf("Avant de jouer, veuillez vous enregistrer en tant qu'utilisateur .\n");
 	scanf("%s", nom);
+
 	if (curseur != NULL) {
 			fgets(topPlayer, 100, curseur);
 			fgets(topScore, 100, curseur);
@@ -112,6 +113,10 @@ void jeuCapitale(PAYS * pTab) {
 		 printf("Ouverture impossible\n");
  }
 
+	  printf("----------------------------------------------------------------------\n");
+	  printf("Le meilleur joueur est : %s", topPlayer);
+	  printf("Avec un score de : %s\n", topScore);
+	  printf("----------------------------------------------------------------------\n");
 	do {
 		
 		random = rand() % 192;
@@ -149,7 +154,7 @@ void jeuCapitale(PAYS * pTab) {
 	} while (error != 1);
 	_itoa(i, score, 100);
 	printf("C'est perdu votre score est de : %d\n", i);
-	printf("La bonne reponses etait : %s\n", p.capitale);
+	printf("La bonne reponse etait : %s\n", p.capitale);
 
 	if (maxScore < i) {
 		FILE * ecriture = fopen("enregistrement.txt", "w");
@@ -164,6 +169,5 @@ void jeuCapitale(PAYS * pTab) {
 		}
 	}
 		
-	
 	
 }
