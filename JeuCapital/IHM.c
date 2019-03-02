@@ -6,6 +6,7 @@ void menu() {
 	PAYS tab[250] = { 0 };
 	chargementPays(tab);
 	int choix;
+	char lettre[1];
 	do
 	{
 		system("cls");
@@ -28,7 +29,23 @@ void menu() {
 			jeuCapitale(tab);
 			system("pause");
 			break;
+		case 3:
+			jeuPays(tab);
+			system("pause");
+			break;
+		case 4:
+
+			PaysParLettre(tab);
+
+			system("pause");
+			break;
+
+		default:
+			printf("Erreur system, veuillez choisir une autre valeur \n");
+			system("pause");
+			break;
 		}
+
 
 
 	} while (choix != 0);

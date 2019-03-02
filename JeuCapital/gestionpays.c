@@ -127,10 +127,10 @@ void jeuCapitale(PAYS * pTab) {
 		while (j < 3) {
 			temp1 = p.capitale[j];
 			temp2 = chaine[j];
-			if (65 < temp1 && temp1 < 91) {
+			if (65 <= temp1 && temp1 <= 91) {
 				temp1 += 32;
 			}
-			if (65 < temp2 && temp2 < 91) {
+			if (65 <= temp2 && temp2 <= 91) {
 				temp2 += 32;
 			}
 			FormatAccent(&temp1);		
@@ -170,4 +170,131 @@ void jeuCapitale(PAYS * pTab) {
 	}
 		
 	
+}
+
+void jeuPays(PAYS * pTab) {
+
+	PAYS p;
+	char chaine[100];
+	int random;
+	int difference = 0;
+	int error = 0;
+	int i = 0;
+	int j = 0;
+	char nom[100];
+	char score[100];
+	char topPlayer[100];
+	char topScore[100];
+	char temp1;
+	char temp2;
+	int maxScore;
+
+	FILE * lecture = fopen("enregistrement2.txt", "r");
+	printf("Avant de jouer, veuillez vous enregistrer en tant qu'utilisateur .\n");
+	scanf("%s", nom);
+
+	if (lecture != NULL) {
+		fgets(topPlayer, 100, lecture);
+		fgets(topScore, 100, lecture);
+		maxScore = atoi(topScore);
+		fclose(lecture);
+	}
+	else {
+		printf("Ouverture impossible\n");
+	}
+
+	printf("----------------------------------------------------------------------\n");
+	printf("Le meilleur joueur est : %s", topPlayer);
+	printf("Avec un score de : %s\n", topScore);
+	printf("----------------------------------------------------------------------\n");
+	do {
+
+		random = rand() % 192;
+		p = *(pTab + random);
+		printf("Quelle sont les trois premieres lettre du pays de la capitale: %s\n", p.capitale);
+		scanf("%s", chaine);
+
+		while (j < 3) {
+			temp1 = p.nom[j];
+			temp2 = chaine[j];
+			if (65 <= temp1 && temp1 <= 91) {
+				temp1 += 32;
+			}
+			if (65 <= temp2 && temp2 <= 91) {
+				temp2 += 32;
+			}
+			FormatAccent(&temp1);
+			FormatAccent(&temp2);
+
+			if (temp1 != temp2) {
+				difference++;
+			}
+			j++;
+		}
+		j = 0;
+		if (difference == 0) {
+			printf("Bravo vous avez trouver ! \n");
+			system("pause");
+			i++;
+
+		}
+		else {
+			error = 1;
+		}
+	} while (error != 1);
+	_itoa(i, score, 100);
+	printf("C'est perdu votre score est de : %d\n", i);
+	printf("La bonne reponse etait : %s\n", p.nom);
+
+	if (maxScore < i) {
+		FILE * ecriture = fopen("enregistrement2.txt", "w");
+		if (ecriture != NULL) {
+			fputs(nom, ecriture);
+			fputs("\n", ecriture);
+			fputs(score, ecriture);
+			fclose(ecriture);
+		}
+		else {
+			printf("Sauvegarde impossible\n");
+		}
+	}
+
+
+
+
+}
+
+void PaysParLettre(PAYS * ptab) {
+	char Tableau[100];
+	PAYS p;
+	int i = 0;
+	char lettre;
+	char temp1;
+	char temp2;
+	int j = 0;
+
+	printf("Pour afficher les pays souhaités, selectionnez la lettre voulue :\n");
+	scanf("%c", &lettre);
+	
+	while (i < 191) {
+		temp1 = p.nom[i];
+		temp2 = lettre;
+		if (65 <= temp1 && temp1 <= 91) {
+			temp1 += 32;
+		}
+		if (65 <= temp2 && temp2 <= 91) {
+			temp2 += 32;
+		}
+		FormatAccent(&temp1);
+		FormatAccent(&temp2);
+		if (temp1 = temp2) {
+			strcpy(Tableau[j], p.nom[i]);
+			j++;
+		}
+
+
+		i++;
+	}
+
+
 }

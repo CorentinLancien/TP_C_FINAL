@@ -15,6 +15,8 @@ typedef struct {
 
 void chargementPays(PAYS * );
 void jeuCapitale(PAYS * );
+void PaysParLettre(PAYS *);
+void jeuPays(PAYS * pTab);
 void afficherListePays(PAYS * );
 
 #endif;

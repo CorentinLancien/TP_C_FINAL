@@ -1,5 +1,5 @@
-﻿  gestionpays.c
-c:\users\coren\onedrive\documents\dossier cours\tp_c_final\jeucapital\gestionpays.c(4): warning C4101: 'c' : variable locale non référencée
-c:\users\coren\onedrive\documents\dossier cours\tp_c_final\jeucapital\gestionpays.c(15): warning C4101: 'r' : variable locale non référencée
+﻿  IHM.c
+c:\users\coren\onedrive\documents\dossier cours\tp_c_final\jeucapital\ihm.c(5): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+c:\users\coren\onedrive\documents\dossier cours\tp_c_final\jeucapital\ihm.c(9): warning C4101: 'lettre' : variable locale non référencée
   JeuCapital.vcxproj -> C:\Users\coren\OneDrive\Documents\Dossier Cours\TP_C_FINAL\x64\Debug\JeuCapital.exe
   JeuCapital.vcxproj -> C:\Users\coren\OneDrive\Documents\Dossier Cours\TP_C_FINAL\x64\Debug\JeuCapital.pdb (Partial PDB)
