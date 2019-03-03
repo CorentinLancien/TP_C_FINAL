@@ -1,8 +1,5 @@
 ﻿  gestionpays.c
 c:\users\coren\onedrive\documents\dossier cours\tp_c_final\jeucapital\gestionpays.c(4): warning C4101: 'c' : variable locale non référencée
 c:\users\coren\onedrive\documents\dossier cours\tp_c_final\jeucapital\gestionpays.c(15): warning C4101: 'r' : variable locale non référencée
-c:\users\coren\onedrive\documents\dossier cours\tp_c_final\jeucapital\gestionpays.c(284): warning C4047: '=' : les niveaux d'indirection de 'char' et de 'char *' sont différents
-c:\users\coren\onedrive\documents\dossier cours\tp_c_final\jeucapital\gestionpays.c(294): warning C4133: 'fonction' : types incompatibles - de 'PAYS [100]' à 'char *'
-c:\users\coren\onedrive\documents\dossier cours\tp_c_final\jeucapital\gestionpays.c(275): warning C4101: 'tempTab' : variable locale non référencée
   JeuCapital.vcxproj -> C:\Users\coren\OneDrive\Documents\Dossier Cours\TP_C_FINAL\x64\Debug\JeuCapital.exe
   JeuCapital.vcxproj -> C:\Users\coren\OneDrive\Documents\Dossier Cours\TP_C_FINAL\x64\Debug\JeuCapital.pdb (Partial PDB)

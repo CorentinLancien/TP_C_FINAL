@@ -265,23 +265,24 @@ void jeuPays(PAYS * pTab) {
 }
 
 void PaysParLettre(PAYS * ptab) {
-	PAYS Tableau[100];
 	PAYS p;
+	char * Tableau = NULL;
+	Tableau = malloc(sizeof(char));
+	int n = 0;
 	int i = 0;
-	char lettre[1];
+	int j = 0;
 	char temp1;
 	char temp2;
-	char pays[100];
-	char tempTab[100];
-	int j = 0;
-
-	printf("Pour afficher les pays souhaités, selectionnez la lettre voulue :\n");
+	char lettre[10];
+	printf("Veuillez choisir la lettre par laquelle vous voulez afficher vos pays : \n");
 	scanf("%s", lettre);
-	
-	while (i < 191) {
-		strcpy(pays, p.nom);
-		temp1 = pays[0];
-		temp2 = lettre;
+	while (n < 192) {
+
+		p = *(ptab + n);
+
+		temp1 = lettre[0];
+		temp2 = p.nom[0];
+
 		if (65 <= temp1 && temp1 <= 91) {
 			temp1 += 32;
 		}
@@ -290,15 +291,39 @@ void PaysParLettre(PAYS * ptab) {
 		}
 		FormatAccent(&temp1);
 		FormatAccent(&temp2);
-		if (temp1 = temp2) {
-			strcpy(Tableau, pays);
 
-			j++;
+		if (temp1 == temp2) {
+			while (p.nom[j] != 0) {
+				temp2 = p.nom[j];
+				Tableau[i] = temp2;
+				i++;
+				j++;
+			}
+			j = 0;
+			
 		}
-
-
-		i++;
+		n++;
 	}
+	n = 0;
+	system("cls");
+	while (n < strlen(Tableau)) {
+		
+		temp2 = Tableau[n +1];
+		if (65 <= temp1 && temp1 <= 91) {
+			temp1 += 32;
+		}
+		if (65 <= temp2 && temp2 <= 91) {
+			temp2 += 32;
+		}
+		FormatAccent(&temp1);
+		FormatAccent(&temp2);
 
-
+		printf("%c", Tableau[n]);
+		if (temp1 == temp2 && n != 0) {
+			printf("\n");
+		}
+		
+		n++;
+	}
+	printf("\n");
 }
