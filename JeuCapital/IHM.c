@@ -39,7 +39,11 @@ void menu() {
 
 			system("pause");
 			break;
+		case 5 :
+			PaysPlusPeuples(tab);
 
+			system("pause");
+			break;
 		default:
 			printf("Erreur system, veuillez choisir une autre valeur \n");
 			system("pause");

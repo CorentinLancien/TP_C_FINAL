@@ -18,5 +18,6 @@ void jeuCapitale(PAYS * );
 void PaysParLettre(PAYS *);
 void jeuPays(PAYS * pTab);
 void afficherListePays(PAYS * );
+void PaysPlusPeuples(PAYS *);
 
 #endif;

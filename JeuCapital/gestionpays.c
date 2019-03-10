@@ -266,23 +266,25 @@ void jeuPays(PAYS * pTab) {
 
 void PaysParLettre(PAYS * ptab) {
 	PAYS p;
-	char * Tableau = NULL;
-	Tableau = malloc(sizeof(char));
-	int n = 0;
-	int i = 0;
-	int j = 0;
+	PAYS pTemp;
+	PAYS Tableau[100];
 	char temp1;
 	char temp2;
-	char lettre[10];
-	printf("Veuillez choisir la lettre par laquelle vous voulez afficher vos pays : \n");
-	scanf("%s", lettre);
+	int n = 0;
+	int i = 0;
+	unsigned char lettre[10] = { '\0' };
+	do {
+		printf("Veuillez choisir la lettre par laquelle vous voulez afficher vos pays : \n");
+		scanf("%s", lettre);
+	} while (lettre[1] != '\0');
+	
 	while (n < 192) {
 
 		p = *(ptab + n);
-
-		temp1 = lettre[0];
-		temp2 = p.nom[0];
-
+		pTemp = *(ptab + n);
+		
+		temp1 = p.nom[0];
+		temp2 = lettre[0];
 		if (65 <= temp1 && temp1 <= 91) {
 			temp1 += 32;
 		}
@@ -291,39 +293,67 @@ void PaysParLettre(PAYS * ptab) {
 		}
 		FormatAccent(&temp1);
 		FormatAccent(&temp2);
+
 
 		if (temp1 == temp2) {
-			while (p.nom[j] != 0) {
-				temp2 = p.nom[j];
-				Tableau[i] = temp2;
-				i++;
-				j++;
-			}
-			j = 0;
-			
+			strcpy(pTemp.nom, p.nom);
+			strcpy(pTemp.capitale, p.capitale);
+			pTemp.populationCapitale = p.populationCapitale;
+			pTemp.id = i + 1;
+			*(Tableau + i) = pTemp;
+			i++;
 		}
 		n++;
-	}
-	n = 0;
-	system("cls");
-	while (n < strlen(Tableau)) {
-		
-		temp2 = Tableau[n +1];
-		if (65 <= temp1 && temp1 <= 91) {
-			temp1 += 32;
-		}
-		if (65 <= temp2 && temp2 <= 91) {
-			temp2 += 32;
-		}
-		FormatAccent(&temp1);
-		FormatAccent(&temp2);
 
-		printf("%c", Tableau[n]);
-		if (temp1 == temp2 && n != 0) {
-			printf("\n");
-		}
 		
+		
+	}
+	
+	n = 0;
+	while (n < i){
+		pTemp = *(Tableau + n);
+		printf("%d - %s - %s - (%d)", pTemp.id, pTemp.nom, pTemp.capitale, pTemp.populationCapitale);
+		printf("\n");
 		n++;
 	}
-	printf("\n");
+
+	
+
+}
+
+ void PaysPlusPeuples(PAYS * ptab) {
+
+	PAYS p1;
+	PAYS p2;
+	int  i = 192;
+	int j = 0;
+	PAYS temp;
+	int choix = 0;
+
+	printf("Combien de capitale voulez vous afficher ?\n");
+	scanf("%d", &choix);
+
+	while (i > 0) {
+		while (j < i) {
+			p1 = *(ptab + j + 1);
+			p2 = *(ptab + j);
+			if (p1.populationCapitale < p2.populationCapitale) {
+
+				temp = p1;
+				p1 = p2;
+				p2 = temp;
+			}
+			j++;
+		}
+		j = 0;
+		i--;
+	
+	}
+	i = 0;
+	while (i < choix) {
+		p1 = *(ptab + i);
+		printf("%d - %s - %s - (%d)", p1.id, p1.nom, p1.capitale, p1.populationCapitale);
+		printf("\n");
+		i++;
+	}
 }
