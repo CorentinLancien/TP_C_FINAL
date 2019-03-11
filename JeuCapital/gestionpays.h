@@ -13,6 +13,11 @@ typedef struct {
 	int populationCapitale;
 }PAYS;
 
+typedef struct {
+	int score;
+	char nom[100];
+}PLAYER;
+
 void chargementPays(PAYS * );
 void jeuCapitale(PAYS * );
 void PaysParLettre(PAYS *);

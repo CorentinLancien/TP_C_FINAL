@@ -175,6 +175,8 @@ void jeuCapitale(PAYS * pTab) {
 void jeuPays(PAYS * pTab) {
 
 	PAYS p;
+	PLAYER tabPlayer[5];
+	PLAYER player1;
 	char chaine[100];
 	int random;
 	int difference = 0;
@@ -183,81 +185,125 @@ void jeuPays(PAYS * pTab) {
 	int j = 0;
 	char nom[100];
 	char score[100];
-	char topPlayer[100];
-	char topScore[100];
 	char temp1;
 	char temp2;
-	int maxScore;
+	int choice = 0;
+
 
 	FILE * lecture = fopen("enregistrement2.txt", "r");
 	printf("Avant de jouer, veuillez vous enregistrer en tant qu'utilisateur .\n");
 	scanf("%s", nom);
 
 	if (lecture != NULL) {
-		fgets(topPlayer, 100, lecture);
-		fgets(topScore, 100, lecture);
-		maxScore = atoi(topScore);
+
+		while (i < 5) {
+			player1 = *(tabPlayer + i);
+			fgets(player1.nom, 100, lecture);
+
+
+			fgets(score, 100, lecture);
+			player1.score = atoi(score);
+			
+			*(tabPlayer + i) = player1;
+			i++;
+		}
 		fclose(lecture);
+		i = 0;
 	}
 	else {
 		printf("Ouverture impossible\n");
 	}
 
-	printf("----------------------------------------------------------------------\n");
-	printf("Le meilleur joueur est : %s", topPlayer);
-	printf("Avec un score de : %s\n", topScore);
-	printf("----------------------------------------------------------------------\n");
 	do {
+		system("cls");
+		printf("Bienvenue : %s, choisissez l'option qui vous convient\n", nom);
+		printf("1 - Afficher les cinqs meilleurs joueurs\n");
+		printf("2 - Jouer au jeu\n");
+		printf("0 - Quitter\n");
+		scanf("%d", &choice);
+		switch (choice) {
+		
+		case 1 :
+			system("cls");
+			printf("**********************************************************************************\n");
+			printf("Classement des meilleurs joueurs :\n");
+			printf("**********************************************************************************\n\n");
+			while (i < 5) {
+				player1 = *(tabPlayer + i);
+				printf("Top : %d - %savec un score de : %d\n", i, player1.nom, player1.score);
 
-		random = rand() % 192;
-		p = *(pTab + random);
-		printf("Quelle sont les trois premieres lettre du pays de la capitale: %s\n", p.capitale);
-		scanf("%s", chaine);
-
-		while (j < 3) {
-			temp1 = p.nom[j];
-			temp2 = chaine[j];
-			if (65 <= temp1 && temp1 <= 91) {
-				temp1 += 32;
+				i++;
 			}
-			if (65 <= temp2 && temp2 <= 91) {
-				temp2 += 32;
-			}
-			FormatAccent(&temp1);
-			FormatAccent(&temp2);
-
-			if (temp1 != temp2) {
-				difference++;
-			}
-			j++;
-		}
-		j = 0;
-		if (difference == 0) {
-			printf("Bravo vous avez trouver ! \n");
 			system("pause");
-			i++;
 
-		}
-		else {
-			error = 1;
-		}
-	} while (error != 1);
-	_itoa(i, score, 100);
-	printf("C'est perdu votre score est de : %d\n", i);
-	printf("La bonne reponse etait : %s\n", p.nom);
+			break;
+		case 2 :
 
-	if (maxScore < i) {
-		FILE * ecriture = fopen("enregistrement2.txt", "w");
-		if (ecriture != NULL) {
-			fputs(nom, ecriture);
-			fputs("\n", ecriture);
-			fputs(score, ecriture);
-			fclose(ecriture);
+			do {
+
+				random = rand() % 192;
+				p = *(pTab + random);
+				printf("Quelle sont les trois premieres lettre du pays de la capitale: %s\n", p.capitale);
+				scanf("%s", chaine);
+
+				while (j < 3) {
+					temp1 = p.nom[j];
+					temp2 = chaine[j];
+					if (65 <= temp1 && temp1 <= 91) {
+						temp1 += 32;
+					}
+					if (65 <= temp2 && temp2 <= 91) {
+						temp2 += 32;
+					}
+					FormatAccent(&temp1);
+					FormatAccent(&temp2);
+
+					if (temp1 != temp2) {
+						difference++;
+					}
+					j++;
+				}
+				j = 0;
+				if (difference == 0) {
+					printf("Bravo vous avez trouver ! \n");
+					system("pause");
+					i++;
+
+				}
+				else {
+					error = 1;
+				}
+			} while (error != 1);
+			_itoa(i, score, 100);
+			printf("C'est perdu votre score est de : %d\n", i);
+			printf("La bonne reponse etait : %s\n", p.nom);
+
+			/*if (maxScore < i) {
+				FILE * ecriture = fopen("enregistrement2.txt", "w");
+				if (ecriture != NULL) {
+					fputs(nom, ecriture);
+					fputs("\n", ecriture);
+					fputs(score, ecriture);
+					fclose(ecriture);
+				}
+				else {
+					printf("Sauvegarde impossible\n");
+				}
+			}*/
+			system("pause");
+			break;
+
+		case 0:
+			break;
+		default:
+			printf("Erreur systeme, valeur introuvable");
+			break;
 		}
-		else {
-			printf("Sauvegarde impossible\n");
-		}
-	}
+
+	} while (choice != 0);
+
+
+	
 
 
 
@@ -356,4 +402,6 @@ void PaysParLettre(PAYS * ptab) {
 		printf("\n");
 		i++;
 	}
+
+
 }
