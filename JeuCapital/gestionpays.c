@@ -183,6 +183,7 @@ void jeuPays(PAYS * pTab) {
 	int error = 0;
 	int i = 0;
 	int j = 0;
+	int k = 0;
 	char nom[100];
 	char score[100];
 	char temp1;
@@ -224,13 +225,14 @@ void jeuPays(PAYS * pTab) {
 		switch (choice) {
 		
 		case 1 :
+			i = 0;
 			system("cls");
 			printf("**********************************************************************************\n");
 			printf("Classement des meilleurs joueurs :\n");
 			printf("**********************************************************************************\n\n");
 			while (i < 5) {
 				player1 = *(tabPlayer + i);
-				printf("Top : %d - %savec un score de : %d\n", i, player1.nom, player1.score);
+				printf("Top : %d - %savec un score de : %d\n", i+1, player1.nom, player1.score);
 
 				i++;
 			}
@@ -238,9 +240,9 @@ void jeuPays(PAYS * pTab) {
 
 			break;
 		case 2 :
-
+			i = 0;
 			do {
-
+				
 				random = rand() % 192;
 				p = *(pTab + random);
 				printf("Quelle sont les trois premieres lettre du pays de la capitale: %s\n", p.capitale);
@@ -274,22 +276,38 @@ void jeuPays(PAYS * pTab) {
 					error = 1;
 				}
 			} while (error != 1);
-			_itoa(i, score, 100);
+			
 			printf("C'est perdu votre score est de : %d\n", i);
 			printf("La bonne reponse etait : %s\n", p.nom);
+			j = 0;
+			FILE * ecriture = NULL;
+			ecriture = fopen("enregistrement2.txt", "r+");
+			while (k < 5) {
 
-			/*if (maxScore < i) {
-				FILE * ecriture = fopen("enregistrement2.txt", "w");
-				if (ecriture != NULL) {
+				player1 = *(tabPlayer + k);
+				
+				if (i >= player1.score) {
+
+					_itoa(i, score, 100);
 					fputs(nom, ecriture);
 					fputs("\n", ecriture);
 					fputs(score, ecriture);
-					fclose(ecriture);
+				
+					*(tabPlayer + k) = player1;
+					
 				}
 				else {
-					printf("Sauvegarde impossible\n");
+					_itoa(player1.score, score, 100);
+					fputs(player1.nom, ecriture);
+					fputs(score, ecriture);
+					fputs("\n", ecriture);
 				}
-			}*/
+
+				
+				k++;
+		
+			}
+			fclose(ecriture);
 			system("pause");
 			break;
 
@@ -317,6 +335,7 @@ void PaysParLettre(PAYS * ptab) {
 	char temp1;
 	char temp2;
 	int n = 0;
+	int j = 0;
 	int i = 0;
 	unsigned char lettre[10] = { '\0' };
 	do {
@@ -324,10 +343,10 @@ void PaysParLettre(PAYS * ptab) {
 		scanf("%s", lettre);
 	} while (lettre[1] != '\0');
 	
-	while (n < 192) {
+	while (j < 192) {
 
-		p = *(ptab + n);
-		pTemp = *(ptab + n);
+		p = *(ptab + j);
+		pTemp = *(ptab + j);
 		
 		temp1 = p.nom[0];
 		temp2 = lettre[0];
@@ -349,13 +368,13 @@ void PaysParLettre(PAYS * ptab) {
 			*(Tableau + i) = pTemp;
 			i++;
 		}
-		n++;
+		j++;
 
 		
 		
 	}
 	
-	n = 0;
+
 	while (n < i){
 		pTemp = *(Tableau + n);
 		printf("%d - %s - %s - (%d)", pTemp.id, pTemp.nom, pTemp.capitale, pTemp.populationCapitale);
@@ -401,7 +420,7 @@ void PaysParLettre(PAYS * ptab) {
 		printf("%d - %s - %s - (%d)", p1.id, p1.nom, p1.capitale, p1.populationCapitale);
 		printf("\n");
 		i++;
-	}
+	}  
 
 
 }
